@@ -1,0 +1,348 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: datetime
+        name: date
+        label: Date
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: boolean
+        name: math
+        label: Math
+      - type: boolean
+        name: mermaid
+        label: Mermaid
+      - type: object
+        name: image
+        label: Image
+        fields:
+          - type: image
+            name: src
+            label: Src
+          - type: number
+            name: width
+            label: Width
+            subtype: int
+          - type: number
+            name: height
+            label: Height
+            subtype: int
+      - type: boolean
+        name: pin
+        label: Pin
+  tab:
+    type: page
+    label: Tab
+    folder: _tabs
+    match:
+      - about.md
+      - archives.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: icon
+        label: Icon
+      - type: number
+        name: order
+        label: Order
+        subtype: int
+      - type: string
+        name: layout
+        label: Layout
+  tab_1:
+    type: page
+    label: Tab 1
+    folder: _tabs
+    match:
+      - categories.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: icon
+        label: Icon
+      - type: number
+        name: order
+        label: Order
+        subtype: int
+  tab_2:
+    type: page
+    label: Tab 2
+    folder: _tabs
+    match:
+      - tags.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: icon
+        label: Icon
+      - type: number
+        name: order
+        label: Order
+        subtype: int
+  doc:
+    type: page
+    label: Doc
+    folder: docs
+    match: '*'
+    fields: []
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: object
+        name: layout
+        label: Layout
+        fields:
+          - type: string
+            name: post
+            label: Post
+          - type: string
+            name: category
+            label: Category
+          - type: string
+            name: tag
+            label: Tag
+      - type: object
+        name: tabs
+        label: Tabs
+        fields:
+          - type: string
+            name: home
+            label: Home
+          - type: string
+            name: categories
+            label: Categories
+          - type: string
+            name: tags
+            label: Tags
+          - type: string
+            name: archives
+            label: Archives
+          - type: string
+            name: about
+            label: About
+      - type: object
+        name: search
+        label: Search
+        fields:
+          - type: string
+            name: hint
+            label: Hint
+          - type: string
+            name: cancel
+            label: Cancel
+          - type: string
+            name: no_results
+            label: No Results
+      - type: object
+        name: panel
+        label: Panel
+        fields:
+          - type: string
+            name: lastmod
+            label: Lastmod
+          - type: string
+            name: trending_tags
+            label: Trending Tags
+          - type: string
+            name: toc
+            label: Toc
+      - type: object
+        name: date_format
+        label: Date Format
+        fields:
+          - type: string
+            name: tooltip
+            label: Tooltip
+          - type: object
+            name: post
+            label: Post
+            fields:
+              - type: string
+                name: long
+                label: Long
+              - type: string
+                name: short
+                label: Short
+              - type: string
+                name: archive_month
+                label: Archive Month
+      - type: object
+        name: copyright
+        label: Copyright
+        fields:
+          - type: object
+            name: license
+            label: License
+            fields:
+              - type: string
+                name: template
+                label: Template
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: link
+                label: Link
+          - type: string
+            name: brief
+            label: Brief
+          - type: string
+            name: verbose
+            label: Verbose
+      - type: string
+        name: meta
+        label: Meta
+      - type: object
+        name: not_found
+        label: Not Found
+        fields:
+          - type: string
+            name: statment
+            label: Statment
+          - type: string
+            name: hint_template
+            label: Hint Template
+          - type: string
+            name: head_back
+            label: Head Back
+          - type: string
+            name: archives_page
+            label: Archives Page
+      - type: object
+        name: post
+        label: Post
+        fields:
+          - type: string
+            name: published
+            label: Published
+          - type: string
+            name: updated
+            label: Updated
+          - type: object
+            name: timeago
+            label: Timeago
+            fields:
+              - type: string
+                name: day
+                label: Day
+              - type: string
+                name: hour
+                label: Hour
+              - type: string
+                name: minute
+                label: Minute
+              - type: string
+                name: just_now
+                label: Just Now
+          - type: string
+            name: words
+            label: Words
+          - type: string
+            name: pageview_measure
+            label: Pageview Measure
+          - type: object
+            name: read_time
+            label: Read Time
+            fields:
+              - type: string
+                name: unit
+                label: Unit
+              - type: string
+                name: prompt
+                label: Prompt
+          - type: string
+            name: relate_posts
+            label: Relate Posts
+          - type: string
+            name: share
+            label: Share
+          - type: object
+            name: button
+            label: Button
+            fields:
+              - type: string
+                name: next
+                label: Next
+              - type: string
+                name: previous
+                label: Previous
+              - type: object
+                name: copy
+                label: Copy
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: succeed
+                    label: Succeed
+          - type: string
+            name: pin_prompt
+            label: Pin Prompt
+      - type: object
+        name: categories
+        label: Categories
+        fields:
+          - type: string
+            name: category_measure
+            label: Category Measure
+          - type: string
+            name: post_measure
+            label: Post Measure
+  share:
+    type: data
+    label: Share
+    file: share.yml
+    fields:
+      - type: list
+        name: platforms
+        label: Platforms
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: link
+              label: Link
